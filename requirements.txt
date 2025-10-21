@@ -12,6 +12,8 @@ langchain_groq
 datasets
 PyPDF2
 gunicorn
+wikipedia
+arxiv
 
 
 
