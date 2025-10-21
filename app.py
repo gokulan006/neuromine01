@@ -1,8 +1,7 @@
-
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-from langchain.summarization import load_summarize_chain
+from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain_community.vectorstores import FAISS
 from langchain.retrievers import BM25Retriever, EnsembleRetriever
@@ -142,7 +141,7 @@ def create_vector_embedding():
             
 def rag_retrival(query):
     retreiver=st.session_state.retriever
-    document_chain = load_summarize_chain(llm, chain_type="stuff", prompt=prompt)
+    document_chain=create_stuff_documents_chain(llm,prompt)
     retrieval_chain=create_retrieval_chain(retreiver,document_chain)
     response=retrieval_chain.invoke({'input':query})
     answer=response['answer']
@@ -176,7 +175,6 @@ if query:
      
 
     
-
 
 
 
