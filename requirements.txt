@@ -1,0 +1,14 @@
+langchain
+python-dotenv
+ipykernel
+langchain_community
+pypdf
+bs4
+pymupdf
+langchain_text_splitters
+langchain_openai
+sentence_transformers
+faiss-cpu
+langchain_groq
+datasets
+PyPDF2
