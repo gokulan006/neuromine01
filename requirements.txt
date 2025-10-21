@@ -15,6 +15,7 @@ gunicorn
 wikipedia
 arxiv
 duckduckgo-search
+rank_bm25
 
 
 
