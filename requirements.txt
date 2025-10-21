@@ -1,6 +1,6 @@
-langchain
+langchain==0.3.26
 python-dotenv
-langchain_community
+langchain_community==0.3.27
 streamlit
 pypdf
 pymupdf
@@ -12,6 +12,7 @@ langchain_groq
 datasets
 PyPDF2
 gunicorn
+
 
 
 
