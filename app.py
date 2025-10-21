@@ -49,6 +49,51 @@ For general regulatory or operational questions:
 - Use concise, professional language
 - Rely on current laws, technical knowledge, and document context
 
+
+QuestionWhat is CMR 104?
+ Answer: 104. Safety management plan.- (1) The owner, agent and manager of every mine shall- 
+(a) identify  the  hazards  to  health  and  safety  of  the  persons  employed  at  the  mine  to  which  they 
+may be exposed while at work; 
+(b) assess  the  risks  to  health  and  safety  to  which  employees  may  be  exposed  while  they  are  at 
+work; 
+(c) record the significant hazards identified and risks assessed;  
+(d) make those records available for inspection by the employees; and 
+(e) follow an appropriate process for identification of the hazards and assessment of risks.  
+(2)  The  owner,  agent  and  manager  of  every  mine,  after  consulting  the  safety  committee  of  the  mine 
+and Internal Safety Organisation, shall determine all measures necessary to- 
+(a) eliminate any recorded risk; 
+(b) control the risk at source; 
+(c) minimise the risk; and 
+(d) in so far as the risk remains, 
+(i)  provide for personal protective equipment; and 
+(ii)  institute a program to monitor the risk to which employees may be exposed. 
+(3)   Based  on  the  identified  hazards  and  risks,  the  owner,  agent  and  manager  of  every  mine  shall 
+prepare an auditable document called “Safety Management Plan”, that forms part of the overall 
+management and includes organisational structure, planning, activities, responsibilities, practices, 
+procedures, processes and resources for developing, implementing, achieving, reviewing and maintaining a 
+safety and health policy of a company. 
+¹Hkkx IIμ[k.M 3(i)º Hkkjr dk jkti=k % vlk/kj.k 217 
+(4)  It  shall  be  the  duty  of  the  owner,  agent  and  manager  to  implement  the  measures  determined 
+necessary  and  contained  in  the  Safety  Management  Plan  for  achieving  the  objectives  set  out  in  sub-
+regulation (2) in the order in which the measures are listed in the said sub-regulation. 
+(5)  The Safety Management Plan shall contain- 
+(a)  defined mine safety and health policy of the company; 
+(b)  a plan to implement the policy; 
+(c)  how the mine or mines intend to develop capabilities to achieve the policy; 
+(d)  principal hazard management plans; 
+(e)  standard operating procedures; 
+(f)  ways  to  measure,  monitor  and  evaluate  performance  of  the  safety  management  plan    and  to 
+correct matters that do not conform with the safety management plan;  
+(g)  a plan to regularly review and continually improve the safety management plan; 
+(h)  a plan to review the safety management plan if significant changes occur; and 
+(i)  details of involvement of mine workers in its development and application. 
+(6)  The owner, agent and manager  of every mine  shall periodically review the hazards identified and 
+risks  assessed,  to  determine  whether  further  elimination,  control  and  minimisation  of  risk  is  possible  and 
+consult with the safety committee on review. 
+(7)  The owner, agent or manager of every mine shall submit a copy of the Safety Management Plan to 
+the Regional Inspector who may, at any time by an order in writing, require such modifications in the plan 
+as he may specify therein.
+
  Response Logic:
 - Prioritize context from {context}  
 - If context is insufficient but the question is clearly mining-related, reason using your internal mining knowledge only
@@ -176,6 +221,7 @@ if query:
      
 
     
+
 
 
 
