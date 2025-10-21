@@ -6,11 +6,11 @@ pypdf
 pymupdf
 langchain_text_splitters
 langchain_huggingface
-pickle
 sentence_transformers
 faiss-cpu
 langchain_groq
 datasets
 PyPDF2
 gunicorn
+
 
