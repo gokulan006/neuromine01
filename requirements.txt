@@ -14,6 +14,7 @@ PyPDF2
 gunicorn
 wikipedia
 arxiv
+duckduckgo-search
 
 
 
