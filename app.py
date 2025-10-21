@@ -18,8 +18,8 @@ from langchain.agents import Tool, AgentExecutor, create_react_agent
 load_dotenv()
 
  
-os.environ['HUGGINGFACEHUB_API_TOKEN'] = st.secrets["huggingface"]["token"]
-os.environ['GROQ_API_KEY'] = st.secrets["groq"]["api_key"]
+os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.getenv('HF_TOKEN')
+os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
 
 
 llm=ChatGroq(model='llama-3.1-8b-instant')
@@ -221,6 +221,7 @@ if query:
      
 
     
+
 
 
 
