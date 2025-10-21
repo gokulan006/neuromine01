@@ -1,4 +1,4 @@
-langchain==0.0.198
+langchain
 python-dotenv
 langchain_community
 streamlit
@@ -12,6 +12,7 @@ langchain_groq
 datasets
 PyPDF2
 gunicorn
+
 
 
 
