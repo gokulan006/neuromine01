@@ -18,10 +18,11 @@ from langchain.agents import Tool, AgentExecutor, create_react_agent
 load_dotenv()
 
  
-os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
-os.environ['GROQ_API_KEY']=os.getenv('GROQ_API_KEY')
+hf_token = st.secrets["huggingface"]["token"]
+groq_api_key = st.secrets["groq"]["api_key"]
 
-llm=ChatGroq(model='llama-3.1-8b-instant')
+
+llm=ChatGroq(model='llama-3.1-8b-instant',api_key=groq_api_key)
 
 # prompt
 prompt=ChatPromptTemplate.from_template(
@@ -129,7 +130,7 @@ agent_executor=AgentExecutor.from_agent_and_tools(
 def create_vector_embedding():
     if 'retriever' not in st.session_state:
         with st.spinner("Loading existing vector database..."):
-            st.session_state.embeddings=HuggingFaceEmbeddings(model='sentence-transformers/all-MiniLM-L6-v2')
+            st.session_state.embeddings=HuggingFaceEmbeddings(model='sentence-transformers/all-MiniLM-L6-v2',hf_token=hf_token)
             st.session_state.faiss = FAISS.load_local("new_faiss_index", st.session_state.embeddings,allow_dangerous_deserialization=True)
             with open('./Mining_Documents.pkl','rb') as f:
                 st.session_state.documents = pickle.load(f)
@@ -175,6 +176,7 @@ if query:
      
 
     
+
 
 
 
