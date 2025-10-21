@@ -18,8 +18,8 @@ from langchain.agents import Tool, AgentExecutor, create_react_agent
 load_dotenv()
 
  
-hf_token = st.secrets["huggingface"]["token"]
-groq_api_key = st.secrets["groq"]["api_key"]
+os.environ['HF_TOKEN'] = st.secrets["huggingface"]["token"]
+os.environ['GROQ_API_KEY'] = st.secrets["groq"]["api_key"]
 
 
 llm=ChatGroq(model='llama-3.1-8b-instant',api_key=groq_api_key)
@@ -151,7 +151,7 @@ def rag_retrival(query):
     else:
         return response, False
 
-st.title("RAG Q&A chatbot")
+st.title("Mining Q&A chatbot")
 
 
 create_vector_embedding()
@@ -176,6 +176,7 @@ if query:
      
 
     
+
 
 
 
