@@ -31,11 +31,17 @@ zip_drive_url = "https://drive.google.com/uc?export=download&id=1RU79RNR4cMiUuzs
 if not os.path.exists("Mining_Documents.pkl"):
     download_from_drive(pkl_drive_url, "Mining_Documents.pkl")
 
-# new_faiss_index.zip
-if not os.path.exists("new_faiss_index"):
-    download_from_drive(zip_drive_url, "new_faiss_index.zip")
-    with zipfile.ZipFile("new_faiss_index.zip", "r") as zip_ref:
-        zip_ref.extractall("new_faiss_index")
+# # new_faiss_index.zip
+# if not os.path.exists("new_faiss_index"):
+#     download_from_drive(zip_drive_url, "new_faiss_index.zip")
+#     with zipfile.ZipFile("new_faiss_index.zip", "r") as zip_ref:
+#         zip_ref.extractall("new_faiss_index")
+
+
+import gdown
+
+url = "https://drive.google.com/uc?export=download&id=1RU79RNR4cMiUuzsNZDcILpe0MG0g3c8Z"
+gdown.download(url, "new_faiss_index.zip", quiet=False)
 
 
 load_dotenv()
@@ -244,6 +250,7 @@ if query:
      
 
     
+
 
 
 
