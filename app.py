@@ -203,7 +203,16 @@ agent_executor=AgentExecutor.from_agent_and_tools(
 
 def create_vector_embedding():
     if 'retriever' not in st.session_state:
+        st.write("🔍 Checking if FAISS folder exists:", os.path.exists("new_faiss_index"))
+        st.write("🔍 Checking if Mining_Documents.pkl exists:", os.path.exists("Mining_Documents.pkl"))
+        if os.path.exists("Mining_Documents.pkl"):
+            st.write("📦 Mining_Documents.pkl size:", os.path.getsize("Mining_Documents.pkl"))
+
+        if os.path.exists("new_faiss_index"):
+            st.write("📁 FAISS folder contents:", os.listdir("new_faiss_index"))
+         
         with st.spinner("Loading existing vector database..."):
+         
             st.session_state.embeddings=HuggingFaceEmbeddings(model='sentence-transformers/all-MiniLM-L6-v2' )
             st.session_state.faiss = FAISS.load_local("new_faiss_index", st.session_state.embeddings,allow_dangerous_deserialization=True)
             with open('./Mining_Documents.pkl','rb') as f:
@@ -250,6 +259,7 @@ if query:
      
 
     
+
 
 
 
