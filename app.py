@@ -44,6 +44,11 @@ url = "https://drive.google.com/uc?export=download&id=1RU79RNR4cMiUuzsNZDcILpe0M
 gdown.download(url, "new_faiss_index.zip", quiet=False)
 
 
+if not os.path.exists("new_faiss_index"):
+    with zipfile.ZipFile("new_faiss_index.zip", "r") as zip_ref:
+        zip_ref.extractall("new_faiss_index")
+
+
 load_dotenv()
 
  
@@ -259,6 +264,7 @@ if query:
      
 
     
+
 
 
 
