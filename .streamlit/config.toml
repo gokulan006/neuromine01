@@ -2,3 +2,11 @@
 headless = true
 enableCORS = false
 address = "0.0.0.0"
+
+
+[theme]
+primaryColor = "#0B5FFF"       
+backgroundColor = "#F6F8FA"    
+secondaryBackgroundColor = "#ecececff"
+textColor = "#0F1724"
+font = "sans serif"
