@@ -47,6 +47,21 @@ st.set_page_config(page_title="NeuroMine — Mining Q&A", layout="wide", initial
 
 load_dotenv()
 
+def intiate_css():
+  st.markdown(
+     """
+     <style>
+     .title {font-size:34px; font-weight:700; color:#0b4f6c;}
+     .subtitle {font-size:14px; color:#355;}
+     .card {background: #f8f9fb; padding: 16px; border-radius:12px; box-shadow: 0 4px 12px rgba(15, 23, 42, .06);}
+     .sidebar .stButton>button {width:100%;}
+     code {background:#f1f5f9;padding:4px;border-radius:6px}
+     </style>
+     """,
+     unsafe_allow_html=True,
+   )
+
+initiate_css()
  
 os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.getenv('HF_TOKEN')
 os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
@@ -219,9 +234,9 @@ def create_vector_embedding():
             st.session_state.faiss = FAISS.load_local("new_faiss_index", st.session_state.embeddings,allow_dangerous_deserialization=True)
             with open('./Mining_Documents.pkl','rb') as f:
                 st.session_state.documents = pickle.load(f)
-            st.session_state.vectors=st.session_state.faiss.as_retriever(search_kwargs={"k":5})
+            st.session_state.vectors=st.session_state.faiss.as_retriever(search_kwargs={"k":3})
             st.session_state.sparceRetriever=BM25Retriever.from_documents(st.session_state.documents)
-            st.session_state.sparceRetriever.k=5
+            st.session_state.sparceRetriever.k=3
             st.session_state.retriever=EnsembleRetriever(retrievers=[st.session_state.vectors,st.session_state.sparceRetriever],
                                 weights=[0.6,0.4])
 
@@ -408,3 +423,4 @@ elif page == 'Settings':
 # Footer
 st.markdown('---')
 st.caption('NeuroMine | RAG-powered mining assistant — built for internal use.')
+
