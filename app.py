@@ -384,7 +384,7 @@ elif page == 'Chat Assistant':
         if found:
             # show answer and context
             st.write(response.get('answer'))
-            with st.expander('Context Documents (similarity search)'):
+            with st.expander('Context Documents (hybrid search)'):
                 for doc in response.get('context', []):
                     st.write(doc.page_content)
                     st.write('---')
@@ -409,5 +409,6 @@ elif page == 'Settings':
 # Footer
 st.markdown('---')
 st.caption('NeuroMine | RAG-powered mining assistant — built for internal use.')
+
 
 
