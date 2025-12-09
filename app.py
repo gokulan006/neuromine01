@@ -131,19 +131,18 @@ For general regulatory or operational questions:
 
  Response Logic:
 - Prioritize context from {context}  
-- If context is insufficient but the question is clearly mining-related, reason using your internal mining knowledge only
+- If context is insufficient but the question is clearly mining-related, reason using your internal mining knowledge.
 - Do NOT hallucinate accident details — only refer if such cases exist in context or database metadata
-- If the question is unrelated to mining:  
-  → Respond Politely with: `"I'm here to assist only with mining-related queries."`
+ 
 
 Rules to Follow:
 - If the question is related to mining but still the context does not contain relevant information, respond with: "False"
-- If the question is unrelated to mining, respond with: "I'm here to assist only with mining-related queries, Feel free to ask mining related questions."
+- If the question is unrelated to mining industry and services, respond with: "I'm here to assist only with mining-related queries, Feel free to ask mining related questions."
 - If the question is related to mining but the question is not well defined, respond with: "Could you please clarify your mining-related question?"
 - If the question is related to mining and the context contains relevant information, provide a detailed and accurate answer based on the context.
 
  Output Style:
-- Respond in clear, formal tone
+- Respond in clear, formal tone, be polite.
 - Use **bold headings** only when summarizing accident responses
 - Avoid speculation; always link insight to documents, reports, or known mining practice
  
@@ -409,6 +408,7 @@ elif page == 'Settings':
 # Footer
 st.markdown('---')
 st.caption('NeuroMine | RAG-powered mining assistant — built for internal use.')
+
 
 
 
