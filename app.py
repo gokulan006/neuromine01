@@ -53,7 +53,7 @@ os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.getenv('HF_TOKEN')
 os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
 
 
-llm=ChatGroq(model='llama-3.1-8b-instant')
+llm=ChatGroq(model='groq/compound')
 
 # prompt
 prompt=ChatPromptTemplate.from_template(
